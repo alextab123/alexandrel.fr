@@ -208,17 +208,36 @@ textarea.fld{min-height:80px;resize:vertical}
 
 /* MOBILE */
 @media (max-width:900px){
+  html,body{overflow-x:hidden}
   #stage{height:auto;overflow:visible}
-  #world{position:static;width:auto;height:auto;transform:none!important}
-  .scene{position:static;width:100%;height:auto;min-height:auto;padding:84px 22px}
-  #s4 .diff-mon{position:static;width:200px;margin-top:30px;opacity:.95}
-  .hero,.meth,.cta{grid-template-columns:1fr;gap:40px}
-  .stage-mon{order:-1}.mon-wrap{width:220px}
-  .cards{grid-template-columns:1fr}
-  .facts{grid-template-columns:1fr}
+  #world{position:static!important;width:100%!important;height:auto!important;transform:none!important}
+  .scene{position:static!important;left:auto!important;top:auto!important;width:100%;height:auto;min-height:auto;padding:74px 20px;overflow:visible}
+  #s1{padding-top:120px}
+  .hero,.meth,.cta{grid-template-columns:1fr;gap:34px;padding-top:0}
+  .hero{padding-top:0}
+  .stage-mon{order:-1}.mon-wrap{width:190px}
+  .ring{inset:-10%}.ring.r2{inset:-22%}
+  .h1{font-size:clamp(32px,8.4vw,46px);line-height:1.06;margin-bottom:24px}
+  .stitle{font-size:clamp(28px,7.4vw,40px)}
+  .eyebrow{margin-bottom:18px;font-size:10px}
+  .hero-desc,.ssub,.diff-lead,.cta-lead{font-size:15px}
+  .ctas{flex-direction:column;align-items:flex-start}
+  .btn{width:100%;justify-content:center}
+  .cards{grid-template-columns:1fr;gap:14px}
+  .card{margin-top:0!important;padding:26px 22px}
+  .card:nth-child(2),.card:nth-child(3){margin-top:0!important}
+  .meth-steps .step{grid-template-columns:42px 1fr;gap:16px;padding:18px 0}
+  .facts{grid-template-columns:1fr;max-width:100%}
+  .diff{max-width:100%}
+  #s4 .diff-mon{position:static;width:150px;margin-top:24px;opacity:.95}
+  .form-card,.fcard{padding:26px 22px}
   .tag{display:none}
   .hud,.hint{display:none}
-  .topbar{padding:16px 20px}
+  .topbar{padding:14px 18px}
+  .logo{font-size:16px}
+  .nav-cta{font-size:11px;padding:8px 14px}
+  #introMon{width:200px}
+  #intro .vortex{transform:scale(.72)}
 }
 </style>
 </head>
@@ -424,8 +443,8 @@ window.addEventListener('load',()=>{
   }
 
   if(isMobile){
-    gsap.utils.toArray('[data-anim]').forEach(el=>{
-      gsap.from(el,{y:28,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 86%'}});
+    gsap.utils.toArray('.scene:not(#s1) [data-anim]').forEach(el=>{
+      gsap.from(el,{y:28,opacity:0,duration:.7,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%'}});
     });
     return;
   }
