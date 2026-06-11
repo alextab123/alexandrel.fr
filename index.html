@@ -211,14 +211,15 @@ textarea.fld{min-height:80px;resize:vertical}
   html,body{overflow-x:hidden}
   #stage{height:auto;overflow:visible}
   #world{position:static!important;width:100%!important;height:auto!important;transform:none!important}
-  .scene{position:static!important;left:auto!important;top:auto!important;width:100%;height:auto;min-height:auto;padding:74px 20px;overflow:visible}
+  .scene{position:static!important;left:auto!important;top:auto!important;display:block!important;width:100%;height:auto;min-height:auto;padding:74px 20px;overflow:visible}
   #s1{padding-top:120px}
+  #s4{display:flex!important;flex-direction:column-reverse;align-items:stretch}
   .hero,.meth,.cta{grid-template-columns:1fr;gap:34px;padding-top:0}
   .hero{padding-top:0}
-  .stage-mon{order:-1}.mon-wrap{width:190px}
+  .stage-mon{order:-1}.mon-wrap{width:190px;margin:0 auto}
   .ring{inset:-10%}.ring.r2{inset:-22%}
-  .h1{font-size:clamp(32px,8.4vw,46px);line-height:1.06;margin-bottom:24px}
-  .stitle{font-size:clamp(28px,7.4vw,40px)}
+  .h1{font-size:clamp(30px,8vw,44px);line-height:1.06;margin-bottom:24px;overflow-wrap:break-word}
+  .stitle{font-size:clamp(26px,6.6vw,38px);overflow-wrap:break-word}
   .eyebrow{margin-bottom:18px;font-size:10px}
   .hero-desc,.ssub,.diff-lead,.cta-lead{font-size:15px}
   .ctas{flex-direction:column;align-items:flex-start}
@@ -227,9 +228,9 @@ textarea.fld{min-height:80px;resize:vertical}
   .card{margin-top:0!important;padding:26px 22px}
   .card:nth-child(2),.card:nth-child(3){margin-top:0!important}
   .meth-steps .step{grid-template-columns:42px 1fr;gap:16px;padding:18px 0}
-  .facts{grid-template-columns:1fr;max-width:100%}
+  .facts{grid-template-columns:1fr!important;max-width:100%}
   .diff{max-width:100%}
-  #s4 .diff-mon{position:static;width:150px;margin-top:24px;opacity:.95}
+  #s4 .diff-mon{position:static!important;width:150px;margin:24px auto 0;opacity:.95;display:block}
   .form-card,.fcard{padding:26px 22px}
   .tag{display:none}
   .hud,.hint{display:none}
